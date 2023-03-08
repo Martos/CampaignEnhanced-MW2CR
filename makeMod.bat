@@ -59,7 +59,7 @@ cd ..\..\
 zonetool.exe -buildzone mod -quit
 
 xcopy /Y mod.ff .\mods\campaignenhanced\zone\
-::del mod.ff
+del mod.ff
 
 exit 0
 

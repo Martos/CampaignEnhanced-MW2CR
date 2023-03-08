@@ -1,5 +1,7 @@
 // H2 GSC SOURCE
 // Decompiled by https://github.com/xensik/gsc-tool
+#include maps\_utility;
+#include maps\_campaignenhanced;
 
 setskill( var_0 )
 {
@@ -19,6 +21,7 @@ setskill( var_0 )
         level.global_kill_func = ::empty_kill_func;
         maps\_utility::set_console_status();
 		println("^3Init");
+        so_create_hud_item(2, -135, "TEST", self);
 
         if ( getdvar( "arcademode" ) == "1" )
             thread _id_D36F::main();
@@ -44,6 +47,8 @@ setskill( var_0 )
             var_2.disabledweapon = 0;
             var_2.disabledweaponswitch = 0;
             var_2.disabledusability = 0;
+
+		    var_2 thread xp_score_init();
         }
 
         level.difficultytype[0] = "easy";
@@ -1794,7 +1799,7 @@ auto_adjust_enemy_death_detection( var_0, var_1, var_2, var_3, var_4, var_5, var
     {
 
         if(isPlayer(var_1)) {
-            println("+10");
+            var_1 add_xp(100);
         }
 
         auto_adjust_enemy_died( var_1, var_2, var_5, var_4 );
