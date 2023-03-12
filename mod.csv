@@ -1,2 +1,5 @@
+localize,english
+
 rawfile,maps/_gameskill.gsc
 rawfile,maps/_campaignenhanced.gsc
+rawfile,maps/_player_stats.gsc
